@@ -1,3 +1,4 @@
+<?php
 function customize_category_rss_feed($for_comments) {
   // Don't run on comment feeds
   if ($for_comments) {
