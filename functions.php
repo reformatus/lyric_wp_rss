@@ -28,6 +28,12 @@ function customize_category_rss_feed($for_comments) {
   if (!empty($field_button_icon)) {
     echo '<button_icon>' . esc_html($field_button_icon) . '</button_icon>';
   }
+  
+  // Add a custom field named 'field_button_fa_icon'
+  $field_button_fa_icon = get_post_meta($post_id, 'button_fa_icon', true);
+  if (!empty($field_button_icon)) {
+    echo '<button_fa_icon>' . esc_html($field_button_fa_icon) . '</button_fa_icon>';
+  }
 }
 
 add_action('rss2_item', 'customize_category_rss_feed');
